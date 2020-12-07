@@ -13,7 +13,7 @@
    ```
 1. give executing permissions to startup.sh and shutdown.sh which are under bin. 
    ```sh
-   chmod +x /opt/apache-tomcat-8.5.60.tar.gz/bin/startup.sh 
+   chmod +x /opt/apache-tomcat-8.5.60/bin/startup.sh 
    shutdown.sh
    ```
 
