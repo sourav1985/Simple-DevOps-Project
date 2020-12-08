@@ -26,11 +26,11 @@
    usermod -aG docker dockeradmin
    ```
 ### If the Tomcat Application did not open try the below this only happens if the webapp folder is empty
-   Login to the docker continer using --> 
-  ```
-  docker exec -it <id> /bin/bash
+   Login to the docker continer using below command 
+   ```
+   docker exec -it <id> /bin/bash
   
-  ````
+   ````
   Do ls and see if there is any files under webapps, if not then come out by cd .. and go to ```"/usr/local/tomcat/webapps"``` "cp -R * ../webapps"
   This will copy all the details from locally installed tomcat to docker container
    
