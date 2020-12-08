@@ -1,0 +1,18 @@
+### Step to Create ssh connection from one ec2 instance to another 
+
+Switch to root 
+```
+vi /etc/ssh/sshd_config
+systemctl restart sshd
+
+```
+
+### Change Password 
+```
+useradd ansadmin
+passwd ansadmin
+devops@123 
+
+ssh-keygen
+ssh-copy-id ansadmin@<target_machine_ip>
+ssh ansadmin@<target_machine_ip>
