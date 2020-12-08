@@ -18,6 +18,7 @@
    ```sh
    useradd dockeradmin
    passwd dockeradmin  -> Make sure you change the password else it will not work 
+   devops@123
    ```
 1. add a user to docker group to manage docker 
    ```
