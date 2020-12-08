@@ -14,28 +14,31 @@
    service docker start
    service docker status
    ```
-1. Create a user called dockeradmin
+2. Create a user called dockeradmin
    ```sh
    useradd dockeradmin
    passwd dockeradmin  -> Make sure you change the password else it will not work 
    devops@123
    ```
-1. add a user to docker group to manage docker 
+3. add a user to docker group to manage docker 
    ```
    cat /etc/group
    usermod -aG docker dockeradmin
    ```
 ### If the Tomcat Application did not open try the below this only happens if the webapp folder is empty
    Login to the docker continer using --> 
-  >docker exec -it <id> /bin/bash
-  Do ls and see if there is any files under webapps, if not then come out by cd .. and go to "/usr/local/tomcat/webapps" "cp -R * ../webapps"
+  ```
+  docker exec -it <id> /bin/bash
+  
+  ````
+  Do ls and see if there is any files under webapps, if not then come out by cd .. and go to ```"/usr/local/tomcat/webapps"``` "cp -R * ../webapps"
   This will copy all the details from locally installed tomcat to docker container
    
    To test you can run docker run -it --rm -p 8888:8080 tomcat:8.0 <--- This will download and run the container interactively
    
    After This step you need to add the plugin to jenkins : Publish over SSH and enable password authentication through vi /etc/ssh/sshd_config then search for key word password, and turn it to "yes" once done do service sshd reload 
 ### Validation test
-1. Create a tomcat docker container by pulling a docker image from the public docker registry
+4. Create a tomcat docker container by pulling a docker image from the public docker registry
    ```sh
    docker run -d --name test-tomcat-server -p 8090:8080 tomcat:latest
    ```
