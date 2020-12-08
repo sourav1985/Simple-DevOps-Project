@@ -34,7 +34,7 @@
   Do ls and see if there is any files under webapps, if not then come out by cd .. and go to ```"/usr/local/tomcat/webapps"``` "cp -R * ../webapps"
   This will copy all the details from locally installed tomcat to docker container
    
-   To test you can run ```docker run -it --rm -p 8888:8080 tomcat:8.0``` <--- This will download and run the container interactively
+   To test you can run ```docker run -it --rm -p 8080:8080 tomcat:8.0``` <--- This will download and run the container interactively
    
    After This step you need to add the plugin to jenkins : Publish over SSH and enable password authentication through vi /etc/ssh/sshd_config then search for key word password, and turn it to "yes" once done do service sshd reload 
 ### Validation test
