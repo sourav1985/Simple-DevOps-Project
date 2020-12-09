@@ -1,0 +1,27 @@
+### Connect ec2 instaces 
+``` 
+
+create an id which is common in both the ec2 instances
+
+useradd ansadmin
+passwd ansadmin
+
+change password
+devops@123
+
+got to vi /etc/ssh/sshd_conf 
+search for login using userid and password 
+
+PermitRootLogin yes
+PasswordAuthentication yes
+
+systemctl restart sshd
+
+set it to yes and save the file 
+
+exit
+
+The above step needs to be done on both the servers 
+
+
+```
